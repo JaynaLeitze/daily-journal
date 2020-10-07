@@ -7,12 +7,34 @@
     </head>
 
     <body>
-      <form action="">
+        <h2>Daily Journal</h2>
+      <form action="daily__journal">
           <fieldset>
               <label for="journalDate">Date of entry</label>
               <input type="date" name="journalDate" id="journalDate">
           </fieldset>
-      </form>
+    
+          <fieldset>
+              <label for="concepts">Concepts covered</label>
+                <input type="text">
+          </fieldset>
+     
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="mood">Mood for the day:</label>
+            <select id="moods">
+                <option value="happy">Happy</option>
+                <option value="sad">Sad</option>
+                <option value="energized">Energized</option>
+                <option value="exhausted">Exhausted</option>
+              </select>
+        </fieldset>
+        
+    </form>
+
 
         <script type="module" src="./scripts/main.js"></script>
     </body>
