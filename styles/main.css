@@ -25,3 +25,11 @@ fieldset {
 	display:flex;
 	flex-direction: column;
 }
+body {
+	background-color: #ffeedb;
+	color: #4e3d42;
+
+}
+fieldset {
+	border:2px #7aa095 solid;
+}
