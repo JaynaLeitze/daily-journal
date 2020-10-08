@@ -17,3 +17,19 @@ h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
 }
+
+.daily__journal {
+	display:flex;
+}
+fieldset {
+	display:flex;
+	flex-direction: column;
+}
+body {
+	background-color: #ffeedb;
+	color: #4e3d42;
+
+}
+fieldset {
+	border:2px #7aa095 solid;
+}
