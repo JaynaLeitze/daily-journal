@@ -33,3 +33,10 @@ body {
 fieldset {
 	border:2px #7aa095 solid;
 }
+
+.contentContainer {
+	display:flex;
+	justify-content: space-between;
+	
+}
+

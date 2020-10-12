@@ -1,45 +1,52 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Nashville Software School</title>
-        <link rel="stylesheet" href="./styles/main.css">
-        <script type="module" src="./scripts/main.js">
-    </head>
 
-    <body>
-        <h2>Daily Journal</h2>
-      <form action="daily__journal">
-          <fieldset class="journal__date">
-              <label for="journalDate">Date of entry</label>
-              <input type="date" name="journalDate" id="journalDate">
-          </fieldset>
-    
-          <fieldset class="concepts">
-              <label for="concepts">Concepts covered</label>
+<head>
+    <meta charset="utf-8">
+    <title>Nashville Software School</title>
+    <link rel="stylesheet" href="./styles/main.css">
+
+</head>
+
+<body>
+    <header>Daily Journal</header>
+    <div class="contentContainer">
+        <form action="daily__journal">
+            <fieldset class="journal__date">
+                <label for="journalDate">Date of entry</label>
+                <input type="date" name="journalDate" id="journalDate">
+            </fieldset>
+
+            <fieldset class="concepts">
+                <label for="concepts">Concepts covered</label>
                 <input type="text">
-          </fieldset>
-     
-        <fieldset class="journal__entry">
-            <label for="journalEntry">Journal Entry</label>
-            <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
-        </fieldset>
-        <fieldset class="moods">
-            <label for="mood">Mood for the day:</label>
-            <select id="moods">
-                <option value="happy">Happy</option>
-                <option value="sad">Sad</option>
-                <option value="energized">Energized</option>
-                <option value="exhausted">Exhausted</option>
-              </select>
-        </fieldset>
+            </fieldset>
 
-            <input type="button" value="Record Journal Entry">
-        
-        
-    </form>
+            <fieldset class="journal__entry">
+                <label for="journalEntry">Journal Entry</label>
+                <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
+            </fieldset>
+            <fieldset class="moods">
+                <label for="vibe">Vibe</label>
+                <select id="vibes">
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="energized">Energized</option>
+                    <option value="exhausted">Exhausted</option>
+                </select>
+            </fieldset>
+
+            <input type="button" value="Record Journal Entry"></input>
+
+        </form>
+
+        <div class="contentContainer__right">
+
+        </div>
 
 
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
+    </div>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
 </html>
