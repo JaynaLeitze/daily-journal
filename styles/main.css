@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
-/*Typography
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');/*Typography
 --------------------------------------------------------------*/
 body,
 button,
@@ -30,8 +30,9 @@ body {
 	color: #4e3d42;
 
 }
-fieldset {
-	border:2px #7aa095 solid;
+
+h1 {
+	font-family:"Architects Daughter", cursive  ;
 }
 
 .contentContainer {
@@ -39,4 +40,7 @@ fieldset {
 	justify-content: space-between;
 	
 }
+
+
+
 

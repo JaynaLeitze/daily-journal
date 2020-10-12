@@ -5,28 +5,25 @@
     <meta charset="utf-8">
     <title>Nashville Software School</title>
     <link rel="stylesheet" href="./styles/main.css">
-
 </head>
 
 <body>
-    <header>Daily Journal</header>
+    <header>
+        <h1> Daily Journal </h1>
+    </header>
     <div class="contentContainer">
-        <form action="daily__journal">
+        <form action="daily__journal" class="formContainer">
             <fieldset class="journal__date">
                 <label for="journalDate">Date of entry</label>
                 <input type="date" name="journalDate" id="journalDate">
-            </fieldset>
+            
 
-            <fieldset class="concepts">
                 <label for="concepts">Concepts covered</label>
                 <input type="text">
-            </fieldset>
 
-            <fieldset class="journal__entry">
                 <label for="journalEntry">Journal Entry</label>
                 <textarea name="entry" id="entry" cols="30" rows="10"></textarea>
-            </fieldset>
-            <fieldset class="moods">
+
                 <label for="vibe">Vibe</label>
                 <select id="vibes">
                     <option value="happy">Happy</option>
