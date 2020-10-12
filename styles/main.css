@@ -8,38 +8,47 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
+	font-family: "Architects Daughter",cursive;
 	font-size: 14px;
 	line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
+  font-family: "Architects Daughter",cursive;
   letter-spacing: 2px;
 }
 
-.daily__journal {
-	display:flex;
-}
 fieldset {
 	display:flex;
 	flex-direction: column;
+	flex-basis: 3;
 }
 body {
-	background-color: #ffeedb;
-	color: #4e3d42;
+	background-image:url("Journal Background.png") ;
+	background-color: #cccccc;
+	color: white;
+	font-size: larger;
 
 }
 
 h1 {
 	font-family:"Architects Daughter", cursive  ;
+	text-align: center;
+	font-size: 75px;
+	
 }
 
 .contentContainer {
 	display:flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	
 }
+.formContainer {
+	padding:40px;
+
+}
+
+
 
 
 
