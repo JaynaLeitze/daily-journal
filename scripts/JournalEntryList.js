@@ -5,15 +5,19 @@
  *    data provider component
  */
 
- import { useJournalEntries } from "./JournalDataProvider.js"
+ import { getEntries, useJournalEntries, useEntries } from "./JournalDataProvider.js"
  import { JournalEntryComponent } from "./JournalEntry.js"
 
+ const eventHub = document.querySelector(".contentContainer")
+
+ eventHub.addEventListener("journalStateChanged",() => EntryListComponent())
 
  
 
  export const EntryListComponent = () => {
     const entryLog = document.querySelector(".contentContainer__right")
-
+    getEntries()
+    .then(() => {
      const entries = useJournalEntries()
 
      let EntryHTMLRepresetnations = ""
@@ -21,15 +25,16 @@
          EntryHTMLRepresetnations += JournalEntryComponent(entry)
      }
           
-       entryLog.innerHTML += `
-       <section class="entryLog">
-       <h3> Older Entries: </h3>
-       <div class="entryContainer">
-       ${EntryHTMLRepresetnations}
-       </div>
-       </section>
-       `
+      entryLog.innerHTML = `
+      <section class="entryLog">
+      <h3> Older Entries: </h3>
+      <div class="entryContainer">
+      ${EntryHTMLRepresetnations}
+      </div>
+      </section>
+      `
 
        
-     }
+     })
+    }
  
