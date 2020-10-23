@@ -1,35 +1,39 @@
-/*
- *   Journal data provider for Daily Journal application
- *
- *      Holds the raw data about each entry and exports
- *      functions that other modules can use to filter
- *      the entries for different purposes.
- */
+const eventHub = document.querySelector(".contentContainer")
+
+const dispatchJournalChangeEvent = () => {
+    const journalChangedEvent = new CustomEvent("journalStateChanged")
+
+    eventHub.dispatchEvent(journalChangedEvent)
+}
 
 // This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "07/24/2025",
-        concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        vibe: "Ok"
-    },
-    {
-        id: 2,
-        date: "07/25/2025",
-        concept: "JavaScript",
-        entry: "Started JS, need I say more?",
-        vibe: "Exhausted"
-    },
-    {
-        id: 3,
-        date: "07/26/2025",
-        concept: " More JavaScript",
-        entry: "My brain still hurts.",
-        vibe: "Exhausted"
-    },
-]
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(response => response.json())  // Parse as JSON
+        .then(parsedEntries => {
+            journal = parsedEntries 
+            // What should happen when we finally have the array?
+        })
+}
+
+let journal = []
+
+export const useEntries = () => {
+    journal.slice()
+}
+
+
+export const saveEntry = (entry) => {
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getEntries)
+    .then(dispatchJournalChangeEvent)
+}
 
 /*
     You export a function that provides a version of the
