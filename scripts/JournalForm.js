@@ -33,7 +33,7 @@ eventHub.addEventListener("click", clickEvent => {
         const journalDate = document.querySelector("#journalDate").value
         const journalConcept = document.querySelector("#journalConcept").value
         const journalEntry = document.querySelector("#entry").value
-        const vibes = document.querySelector("#vibes").value
+        const moodID = document.querySelector("#vibes").value
 
         // make a note object
 
@@ -41,7 +41,7 @@ eventHub.addEventListener("click", clickEvent => {
             date:journalDate,
             concept:journalConcept,
             entry: journalEntry,
-            vibe: vibes
+            moodID: parseInt(moodID)
 
 
         }

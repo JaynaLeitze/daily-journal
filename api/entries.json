@@ -1,32 +1,31 @@
 {
   "entries": [
-    {
-      "id": 1,
-      "date": "07/24/2025",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "vibe": "Ok"
-    },
-    {
-      "id": 2,
-      "date": "07/25/2025",
-      "concept": "JavaScript",
-      "entry": "Started JS, need I say more?",
-      "vibe": "Exhausted"
-    },
-    {
-      "id": 3,
-      "date": "07/26/2025",
-      "concept": " More JavaScript",
-      "entry": "My brain still hurts.",
-      "vibe": "Exhausted"
-    },
-    {
-      "date": "2020-10-23",
-      "concept": "JSON shit",
-      "entry": "Stop fucking breaking",
-      "vibe": "happy",
-      "id": 4
-    }
+    
+  ],
+  "moods": [
+   {
+    "id": 1,
+    "mood":"energized"
+   },
+   {
+    "id": 2,
+    "mood":"happy"
+   },
+   {
+    "id": 3,
+    "mood":"overwhelmed"
+   },
+   {
+    "id": 4,
+    "mood":"frustrated"
+   },
+   {
+    "id": 5,
+    "mood":"mind blown"
+   },
+   {
+    "id": 6,
+    "mood":"supercalifragilisticexpialidoscious"
+   }
   ]
 }

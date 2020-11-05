@@ -21,6 +21,21 @@ let journal = []
 export const useEntries = () => {
     journal.slice()
 }
+let moods = []
+
+export const getMood = () => {
+    return fetch("http://localhost:8088/mood")
+        .then(response => response.json())
+        .then(parsedMoods => {
+            moods = parsedMoods
+        })
+        
+    }
+
+
+export const useMood = () => {
+
+}
 
 
 export const saveEntry = (entry) => {
@@ -34,6 +49,7 @@ export const saveEntry = (entry) => {
     .then(getEntries)
     .then(dispatchJournalChangeEvent)
 }
+
 
 /*
     You export a function that provides a version of the
