@@ -1,34 +1,5 @@
 {
-  "entries": [
-    {
-      "date": "2020-11-08",
-      "concept": "ERD",
-      "entry": "Blah",
-      "moodId": 6,
-      "id": 1
-    },
-    {
-      "date": "2020-11-09",
-      "concept": "glassdale",
-      "entry": "asdf",
-      "moodId": 2,
-      "id": 2
-    },
-    {
-      "date": "2020-11-11",
-      "concept": "erd",
-      "entry": "what",
-      "moodId": 2,
-      "id": 3
-    },
-    {
-      "date": "2020-11-12",
-      "concept": "glassdale",
-      "entry": "Finally finished!",
-      "moodId": 3,
-      "id": 4
-    }
-  ],
+  "entries": [],
   "moods": [
     {
       "id": 1,
