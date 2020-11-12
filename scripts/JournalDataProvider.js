@@ -8,7 +8,7 @@ const dispatchJournalChangeEvent = () => {
 
 // This is the original data.
 export const getEntries = () => {
-    return fetch("http://localhost:8088/entries") // Fetch from the API
+    return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             journal = parsedEntries 
@@ -18,24 +18,9 @@ export const getEntries = () => {
 
 let journal = []
 
-export const useEntries = () => {
-    journal.slice()
-}
-let moods = []
-
-export const getMood = () => {
-    return fetch("http://localhost:8088/mood")
-        .then(response => response.json())
-        .then(parsedMoods => {
-            moods = parsedMoods
-        })
-        
-    }
-
-
-export const useMood = () => {
-
-}
+// export const useEntries = () => {
+//    return  journal.slice()
+// }
 
 
 export const saveEntry = (entry) => {

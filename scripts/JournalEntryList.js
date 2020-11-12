@@ -5,8 +5,9 @@
  *    data provider component
  */
 
- import { getEntries, useJournalEntries, useEntries } from "./JournalDataProvider.js"
+ import { getEntries, useJournalEntries } from "./JournalDataProvider.js"
  import { JournalEntryComponent } from "./JournalEntry.js"
+//  import { useMood } from "./JournalMoodProvider.js"
 
  const eventHub = document.querySelector(".contentContainer")
 
@@ -20,16 +21,19 @@
     .then(() => {
      const entries = useJournalEntries()
 
-     let EntryHTMLRepresetnations = ""
-     for (const entry of entries) {
-         EntryHTMLRepresetnations += JournalEntryComponent(entry)
-     }
+     let EntryHTMLRepresetnations = entries.map( entry => {
+        //  const mood = moods.find(moodObj => moodObj.id === entry.MoodId)
+
+         const html = JournalEntryComponent(entry)
+         return html 
+     })
+     const stringOfAll = EntryHTMLRepresetnations.join("")
           
       entryLog.innerHTML = `
       <section class="entryLog">
       <h3> Older Entries: </h3>
       <div class="entryContainer">
-      ${EntryHTMLRepresetnations}
+      ${stringOfAll}
       </div>
       </section>
       `
