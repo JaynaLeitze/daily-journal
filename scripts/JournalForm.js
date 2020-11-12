@@ -1,9 +1,10 @@
-import { getEntries, saveEntry } from "./JournalDataProvider.js"
+import { getEntries, saveEntry,} from "./JournalDataProvider.js"
+import { getMood, useMood } from "./JournalMoodProvider.js"
 
 const contentTarget = document.querySelector(".journalContainer")
 const eventHub = document.querySelector(".contentContainer")
 
-const render = () => {
+const render = (moods) => {
     contentTarget.innerHTML = `
                 <label for="journalDate">Date of entry</label>
                 <input type="date" name="journalDate" id="journalDate">
@@ -14,12 +15,14 @@ const render = () => {
 
                 <label for="vibe">Vibe</label>
                 <select id="vibes">
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="energized">Energized</option>
-                    <option value="exhausted">Exhausted</option>
-                    <option value="frustrated">Frustrated</option>
-                    <option value="overwhelmed">Overwhelmed</option>
+                    <option value="">Select a Mood</value>
+                    ${moods.map(
+                        moodObj => {
+                            return `<option value="${moodObj.id}"> ${moodObj.mood}</option>`
+                        }
+                    ).join("")
+                }
+
                     
                 </select>
                 <button id="saveEntry">Record Entry</button>
@@ -33,7 +36,7 @@ eventHub.addEventListener("click", clickEvent => {
         const journalDate = document.querySelector("#journalDate").value
         const journalConcept = document.querySelector("#journalConcept").value
         const journalEntry = document.querySelector("#entry").value
-        const vibes = document.querySelector("#vibes").value
+        const moodId = document.querySelector("#vibes").value
 
         // make a note object
 
@@ -41,14 +44,14 @@ eventHub.addEventListener("click", clickEvent => {
             date:journalDate,
             concept:journalConcept,
             entry: journalEntry,
-            vibe: vibes
+            moodId: parseInt(moodId)
 
 
         }
 
         // Post object to database/API/json
         saveEntry(newEntry)
-        render()
+        JournalForm()
     }
     
 })
@@ -56,5 +59,11 @@ eventHub.addEventListener("click", clickEvent => {
 
 
 export const JournalForm = () => {
-    render()
+    getMood()
+    .then(() => {
+        const moodArray = useMood()
+        console.log(moodArray)
+        render(moodArray)
+    })
+    
 }

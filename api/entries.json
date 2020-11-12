@@ -1,32 +1,58 @@
 {
   "entries": [
     {
+      "date": "2020-11-08",
+      "concept": "ERD",
+      "entry": "Blah",
+      "moodId": 6,
+      "id": 1
+    },
+    {
+      "date": "2020-11-09",
+      "concept": "glassdale",
+      "entry": "asdf",
+      "moodId": 2,
+      "id": 2
+    },
+    {
+      "date": "2020-11-11",
+      "concept": "erd",
+      "entry": "what",
+      "moodId": 2,
+      "id": 3
+    },
+    {
+      "date": "2020-11-12",
+      "concept": "glassdale",
+      "entry": "Finally finished!",
+      "moodId": 3,
+      "id": 4
+    }
+  ],
+  "moods": [
+    {
       "id": 1,
-      "date": "07/24/2025",
-      "concept": "HTML & CSS",
-      "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "vibe": "Ok"
+      "mood": "energized"
     },
     {
       "id": 2,
-      "date": "07/25/2025",
-      "concept": "JavaScript",
-      "entry": "Started JS, need I say more?",
-      "vibe": "Exhausted"
+      "mood": "happy"
     },
     {
       "id": 3,
-      "date": "07/26/2025",
-      "concept": " More JavaScript",
-      "entry": "My brain still hurts.",
-      "vibe": "Exhausted"
+      "mood": "overwhelmed"
     },
     {
-      "date": "2020-10-23",
-      "concept": "JSON shit",
-      "entry": "Stop fucking breaking",
-      "vibe": "happy",
-      "id": 4
+      "id": 4,
+      "mood": "frustrated"
+    },
+    {
+      "id": 5,
+      "mood": "mind blown"
+    },
+    {
+      "id": 6,
+      "mood": "supercalifragilisticexpialidoscious"
     }
   ]
 }

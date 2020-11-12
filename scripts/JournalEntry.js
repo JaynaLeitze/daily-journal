@@ -4,7 +4,7 @@ export const JournalEntryComponent = (entry) => {
       <p class="journalDate">${entry.date}<br>
        ${entry.concept}<br>
        ${entry.entry}<br>
-       ${entry.vibe}<br>
+       ${entry.mood.mood}<br>
        <hr class="entryDivider">
      </section>
     `
